@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My quiz | Login</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="db/login.json"></script>
+	<script type="text/javascript">
+		//wait to load document or html
+		$(document).ready(function(){
+			//form submittion jquary
+				$('#ubutn').click(function(){
+					//getting the input
+				 	var uname = $('#uname').val();
+				 	var upass = $('#upass').val();
+				 	var flag=0;
+				 	//validation to the db (as jason file)
+				 	for ( i = 0; i < 3; i++) {
+				 		if(uname == users[i].uid && upass == users[i].upa)  
+				 		{	flag=1;
+				 		    break;
+				 		}
+				 		else
+				 		{flag=0;}
+				 	}
+				 	if (flag==0) 
+				 		{alert("Wrong Credentials !");
+				 		$('#fcheck').attr('action', '');
+				 		window.location.replace("index.html");
+   				 		}
+   				 		//on success create and store session
+				 	else
+				 	    {
+				 	   sessionStorage.setItem("name",uname);
+				 	    }
+		        });
+			});
+
+		//for testing , credientials provided
+	/*	function show()
+		{
+			alert("Use Id|Pass = admin | 1234 , user | asdf, client | aaaa");
+		}  
+
+		!!!REMOVE  JS AS IT CAN BE VIEWED ON INSPECTING THE PAGE  FOR Testing*/
+	</script>
+</head>
+<body>
+
+<div class="box">
+	User Login 
+	<div class="bbox">
+	<center>
+		<form id="fcheck" action="home.html"> 
+<table>
+	<tr>
+		<td>
+			Username:
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" id="uname">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Password:
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="Password" id="upass">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<button id="ubutn" type="submit">Login</button>
+		</td>
+	</tr>
+</table>
+</form>
+</center>
+</div>
+</div>
+</body>
+</html>
