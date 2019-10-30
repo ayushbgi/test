@@ -1,0 +1,43 @@
+var ques = [{
+  
+  no: 1,
+  qu: 'Capital of India ? ',
+  a: 'Delhi',
+  b: 'Mumbai',
+  c: 'Kolkata',
+  d: 'Chennai',
+  an: 'a'
+}, {
+  no: 2,
+  qu: 'National sports of India ?',
+  a: 'Football',
+  b: 'Hockey',
+  c: 'Cricket',
+  d: 'Basketball',
+  an: 'b'
+}, {
+  no: 3,
+  qu: 'Who is the Father of Nation ?',
+  a: 'Jawahar Lal Nehru',
+  b: 'Bhagat Singh',
+  c: 'Mathma Gandhi',
+  d: 'Narendra Modi',
+  an: 'c'
+}, {
+  no: 4,
+  qu: 'Oldest spoken language ?',
+  a: 'Hindi',
+  b: 'English',
+  c: 'Telagu',
+  d: 'Tamil',
+  an: 'd'
+}, {
+  no: 5,
+  qu: 'Who invented zero(0) ?',
+  a: 'Aryabhatt',
+  b: 'Ramayagun',
+  c: 'Vikram Sarabhai',
+  d: 'Homi Bhabha',
+  an: 'a'
+},
+];
