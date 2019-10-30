@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+
+            function plus(a,b) {
+            	
+                return (parseInt(a) + parseInt(b));
+            }
+
+            function minus(a,b) {
+                return (parseInt(a) - parseInt(b));
+            }
+
+            function multiply(a,b) {
+                return (parseInt(a) * parseInt(b));
+            }
+
+            function divide(a,b) {
+                return (parseInt(a) / parseInt(b));
+            }
+
+            function mod(a,b) {
+                return (parseInt(a) % parseInt(b));
+            }
+
+            function per(a,b) {
+                return ((parseInt(a) / parseInt(b))*100);
+            }
+
+            function sqrt(a,b) {
+                return (Math.sqrt(parseInt(a)));
+            }
+
+            function calc() {
+
+                var x = document.getElementById("a").value;
+                var y = document.getElementById("calc").value;
+                var z = document.getElementById("b").value;
+                var w = document.getElementById("output").value;
+
+                switch (y) {
+                    case '0':
+                        w = plus(x, z);
+                        break;
+
+                    case '1':
+                        w = minus(x, z);
+                        break;
+
+                    case '2':
+                        w = multiply(x, z);
+                        break;
+
+                    case '3':
+                        w = divide(x, z);
+                        break;
+
+                    case '4':
+                        w = mod(x, z);
+                        break;
+
+                    case '5':
+                        w = per(x, z);
+                        break;
+
+                     case '6':
+                        w = sqrt(x, z);
+                        break;
+
+                    default:
+                        w = "Invalid Operation !";
+                }
+
+                 document.getElementById("output").value=w;
+
+            }
+
+</script>
+<h1>My mini calculator !</h1>
+<input type="text" id="a" value="">
+
+<select id="calc">
+    <option value="0">+</option>
+    <option value="1">-</option>
+    <option value="2">*</option>
+    <option value="3">/</option>
+    <option value="4">%</option>
+    <option value="5">100%</option>
+    <option value="6">sqrt </option>
+</select>
+
+<input type="text" id="b" value="">
+<input type="button" onClick="calc();" value="=">
+<input type="text" id="output" value="">
+</body>
+</html>

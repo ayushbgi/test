@@ -1,0 +1,22 @@
+<html> <head>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  noConflict();
+  $("p").click(function(){
+    $(this).show();
+  });
+  
+});
+</script>
+</head>
+<body>
+
+<form>
+	<input type="text" name="txtfname" data-required="yes" />
+	<input type="radio" name="txtage" data-required="yes" />
+	<input type="checkbox" name="txtdept" data-required="no" />
+	<input type="submit" name="txtfname" />
+</form>
+</body></html>
+

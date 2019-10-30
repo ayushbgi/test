@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Fourms example
+		</title>
+	</head>
+<body>
+<br><br><br><br>
+<!-- This is file index for defination:
+	name		-na
+	number		-nu
+	message		-me
+	date		-da
+	password	-pa
+	file		-fi
+	gender		-ge
+	t&c			-tc
+	data share	-ds
+	
+ -->
+<table border="5" align="center" cellspacing="5" cellpadding="5">
+	<tr><td>
+		<form method="get" target="fourm.html">
+			<table cellspacing="5" cellpadding="5" border="5">
+				<tr>
+					<td>Name : </td>
+					<td><input type="name" name="na" placeholder="Name" required></td>
+				</tr>
+				<tr>
+					<td>Email : </td>
+					<td><input type="email" name="na" placeholder="Email" required></td>
+				</tr>
+				<tr>
+					<td>Department : </td>
+					<td><input type="number" name="nu" placeholder="Department"></td>
+				</tr>
+				<tr>
+					<td>Field : </td>
+					<td><input type="text" name="fi" value="Intern"></td>
+				</tr>
+				<tr>
+					<td>Feedback : </td>
+					<td><textarea name="me" rows="10" cols="30" placeholder="Your feedback is precious to us."></textarea></td>
+				</tr>
+				<tr>
+					<td>DOB : </td>
+					<td><input type="date" name="da" placeholder="Date" ></td>
+				</tr>
+				<tr>
+					<td>Favourite color :</td>
+					<td><input type="color" name="co" ></td>
+				</tr>
+				<tr>
+					<td>Password : </td>
+					<td><input type="password" name="pa" placeholder="Password"></td>
+				</tr>
+				<tr>
+					<td>File : </td>
+					<td><input type="file" name="fi"></td>
+				</tr>
+				<tr>
+					<td>Gender : </td>
+					<td><input type="radio" name="ge" value="male" checked> Male
+						<input type="radio" name="ge" value="female"> Female
+						<input type="radio" name="ge" value="other"> Other </td>
+				</tr>
+				<tr>
+					<td>Also Gender : </td>
+					<td><select name="cars">
+						<option value="m">Male</option>
+						<option value="f">Female</option>
+						<option value="o">Other</option>
+					</select> </td>
+				</tr>
+				<tr>
+					<td>I agree :</td>
+					<td><input type="checkbox" name="tc" value="accepted"> t&c
+						<input type="checkbox" name="ds" value="accepted"> data share</td>
+				</tr>
+				<tr>
+				<td></td>
+				<td><input type="submit" name="su">
+					<input type="submit" name="su1" disabled>
+					<input type="reset">
+					<button type="button" onclick="alert('You just pressed me!!')">Click Me!</button></td>
+				</td>
+			</table>
+		</form>
+	</tr></td>
+</table>
+</body>
+</html>

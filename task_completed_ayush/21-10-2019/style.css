@@ -1,0 +1,64 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.header{
+	position: relative;
+	background-image: url("images/bgimg01.jpg");
+	height: 100%; 
+    /* Center and scale the image nicely */	
+    background-position: center;	
+    background-repeat: no-repeat;	
+    background-size: cover;
+  	}
+
+.sheader{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	height: 15%; 
+   	}
+
+.support{
+	background-color: #32b27d;
+	color: white;
+	height: 400px;
+	width: 100%;
+	margin-top: 10%;
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+
+.packages{
+	background-color: black;
+	height: 300px;
+	width: 100%;
+	margin-top: 0;
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+	color: white;
+}
+
+.app{
+	position: relative;
+	background-image: url("images/bgimg02.jpg");
+	height: 500px; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer{
+	background-color: black;
+	height: 200px;
+	width: 100%;
+	margin-top: 0;
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+	color: white;
+
+
+}

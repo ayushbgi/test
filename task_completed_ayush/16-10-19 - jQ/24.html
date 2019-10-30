@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+		var c=0;
+		$(document).ready(function(){
+			$('#clk').click(function(){
+			c=$("p").length;
+		$("#output").append("Total child = "+c);
+		});
+	});
+	</script>
+</head>
+<body>
+<div id="selected">
+<p>Red</p>
+<p>White</p>
+<p>Green</p>
+<p>Black</p>
+<p>Blue</p>
+<p>Orange</p>
+</div>
+<button id="clk">Calculate child !</button>
+<div id="output"></div>
+</body>
+</html>

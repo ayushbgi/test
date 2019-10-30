@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function fun()
+		{   
+			
+	for (var i = 1000,j=0; i <= 2000; i++) 
+		{ 
+			document.write(" "+i+" ");
+			j++;
+			if(j==5){
+				document.write("<br>");
+				j=0;
+			}
+		}
+	}
+</script>
+
+</head>
+<body>
+
+<button type="button" onclick="fun()">Click me</button>
+	<p id="out"></p>
+</body>
+</html>

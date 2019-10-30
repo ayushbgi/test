@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Write a program to find the mathematical table for n up to m? -->
+	<title></title>
+	<script type="text/javascript">
+function calc()
+	{
+
+		var m=document.getElementById('a').value;
+		var n=document.getElementById('b').value;
+		for (var i = 0; i <= n; i++) 
+		{
+			document.write(m+" X "+i+" = "+(m*i)+"<br>");
+		}
+}
+
+	</script>
+</head>
+<body>
+
+<h1>Table of given num !</h1>
+
+	<input type="number" id="a" placeholder="Num" ><br>
+	<input type="number" id="b" placeholder="Times" ><br>
+	<button type="button" onclick="calc()">Click me</button>
+		<p id="out"></p>
+</body>
+</html>

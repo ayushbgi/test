@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript">
+
+		
+
+			if(sessionStorage.getItem("name"))
+			{
+				alert(sessionStorage.getItem("name"));
+				$(document).ready(function(){
+					document.getElementById("result").innerHTML = sessionStorage.getItem("name");
+					$('#bout').click(function(){
+						alert("asasa");
+						window.localStorage.removeItem("name");
+						window.open("index.html","_self");
+						
+					});
+					
+				});
+				
+
+			}
+			else
+			{
+				alert("Login");
+				window.open("index.html","_self");
+			}
+	
+
+
+	</script>
+</head>
+<body>
+<div class="topr">
+	Username:<span id="result"></span><br>
+	<button id="bout" type="submit">Logout</button>
+</div>
+</body>
+</html>

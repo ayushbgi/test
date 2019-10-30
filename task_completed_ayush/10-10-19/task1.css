@@ -1,0 +1,374 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.header{
+position: relative;
+	background-image: url("images/bgimg01.jpg");
+	 height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+	}
+
+	.sheader{
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	height: 15%; 
+   	}
+.img1{ position: relative;
+	float: right;
+	
+	}
+
+
+.p1{
+	float: left;
+}
+
+.bimg{
+	
+	  font-size: 25px;
+	  padding:50%;
+}
+.bhead{position: absolute;
+	float: left;
+	margin-top: 5%;
+	margin-left:5%;
+}
+.bbody{position: relative;
+	margin-top: 10%;
+	width: 50%;
+	float: left;
+	margin-left:5%;
+
+
+}
+
+
+aside{
+	
+	 text-align: center;
+	  float: right; 
+	  width: 30%;
+	   height: 550px;
+	    
+	            
+
+}
+
+.my1{
+	top:0;
+	 text-align: center;
+	  margin: auto;
+	  font-size: 25px;
+	 padding-top: 10%;
+}
+
+.my2{
+	top:0;
+	 text-align: center;
+	  margin: auto;
+	  font-size: 25px;
+	 padding-top: 10%;
+}
+aside{
+	
+	 text-align: center;
+	  float: left; 
+	  width: 30%;
+	   height: 550px;
+	    
+	            
+
+}
+
+.bhead1{
+	
+	
+	position: relative;
+	float: right; ;
+	margin-top: 15%;
+	margin-right: 5%;
+	width: 50%;
+	
+
+}
+.bbody1{position: relative;
+	float: right; ;
+	margin-top: 5%;
+	margin-right: 5%;
+	width: 50%;
+
+
+}
+
+.bhead2{
+	
+	
+	
+	float: left; 
+	margin-top: 40%;
+	margin-left: : 5%;
+	width: 50%;
+	
+
+}
+
+
+.my3{
+	top:0;
+	 text-align: center;
+	  margin: left;
+	  font-size: 25px;
+	 padding-top: 10%;
+}
+
+.iaside{
+	
+	 text-align: center;
+	  float: right; 
+	  width: 30%;
+	   height: 550px;
+	    
+	            
+
+}
+
+.a1{
+	float: left;
+	width: 55%;
+}
+.b1{
+	float:right;
+	width: 30%;
+	margin-top: 5%;
+	margin-right: 10%;
+}
+
+.mb1{
+	height: 500px;
+}
+
+.a2{
+	float: left;
+	width: 30%;
+	margin-left: 15%;
+}
+.b2{
+	float:right;
+	width: 40%;
+	margin-top: 3%;
+	margin-right: 10%;
+}
+
+
+.mbh1{
+	
+	margin-top: 10%;
+	margin-left: 40%;
+
+}
+.mbb1{
+	margin-top: 10%;
+	margin-left: 40%;
+}
+
+.mbh2{
+	
+	margin-top: 10%;
+	text-align: center;
+	
+
+}
+
+.capt{
+	float: left;
+}
+
+div.item {
+    /* To correctly align image, regardless of content height: */
+    vertical-align: top;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    text-align: center;
+    /* The width of the container also implies margin around the images. */
+    width: 120px;
+}
+.imge {
+    width: 100px;
+    height: 100px;
+    
+}
+.caption {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+}
+
+.support{
+	background-color: #32b27d;
+	height: 500px;
+	width: 100%;
+	margin-top: 10%;
+}
+
+.packages{
+	background-color: black;
+	height: 500px;
+	width: 100%;
+}
+
+.hhead1{
+	color: white !important;
+}
+
+.hhead2{
+	color: #4CAF50;
+}
+
+.img02{
+	margin-top: 100px;
+}
+
+.a11{
+	float: left;
+	width: 55%;
+	margin-left: 10%;
+}
+.b11{
+	float:right;
+	width: 25%;
+	margin-top: 5%;
+	margin-right: 10%;
+}
+
+}
+.mbb11{
+	margin-top: 5%;
+	margin-left: 40%;
+}
+
+.features{
+	height: 500px;
+	margin-bottom: 100px;
+}
+
+.supportl{
+	float: left;
+	margin-top: 5%;
+	margin-left: 10%;
+	width:50%;
+}
+.supportr{
+	float: right;
+	margin-right: 10%;
+	margin-top: 5%;
+	width:25%;
+}
+
+.supporth{
+	padding-top: 3%;
+	margin-left: 10%;
+	color:white;
+
+}
+
+.packagesh{
+	margin-left: 10%;
+	color: white;
+	padding-top: 3%;
+}
+
+.packagesb{
+	margin-top: 5%;
+    margin-left: 10%;
+}
+
+.download{
+position: relative;
+	background-image: url("images/bgimg02.jpg");
+	 height: 500px; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+	}
+
+	.downloadb{
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	height: 15%; 
+   	}
+
+   	.pillbutton {
+  background-color: #32b27d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+/*
+.pillbutton:hover {
+  background-color: #f1f1f1;
+}
+*/
+
+.testimonials{
+	height: 500px;
+}
+
+.testimonialsh{
+	margin-left: 10%;
+	color: white;
+	padding-top: 3%;
+	color: black;
+}
+
+.testimonialsl{
+	margin-left: 10%;
+	margin-top: 3%;
+	float: left;
+	width: 20%;
+}
+
+.testimonialsr{
+	margin-left: 5%;
+	margin-top: 3%;
+	float: left;
+	width: 50%;
+}
+
+.social{
+	height: 300px;
+	background: black;
+	margin-top: 5%;
+
+}
+
+.socialh{
+	color: white;
+	margin-left: 10%;
+	padding-top: 5%;
+}
+
+.sociali{
+	margin-left: 10%;
+	padding-top: 5%; 
+	height:  10%;
+}

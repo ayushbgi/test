@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Write a program to find the average of the given values in array -->
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var arr=[];
+	var n=prompt("Input number of elements :");
+
+	var sum=0;
+	var a;
+	for (var i = 0; i < n; i++) 
+	{
+		a=prompt("Input elements "+i+":");
+		sum=parseInt(sum)+parseInt(a);
+		arr[i]=a;	
+	}
+	alert(sum);
+	var avg=sum/(n);
+	alert(avg);
+	document.write("Array: "+arr);
+	document.write("Sum: "+sum);
+	document.write("Avg: "+avg);
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+	var a=0,b=0,c=0;
+	$(document).ready(function(){
+  	$("[name=fname]").keyup(function()
+  		{   if($('[name=fname]').val() != "") 
+  			{
+  				a=1;
+  			} 
+  			else
+  				{a=0;}
+  			if(a==1 && b==1 && c==1)
+  			{				
+  				$('[name=but]').removeAttr("disabled");
+  			}
+  			else
+  			{
+  				$('[name=but]').attr('disabled','disabled');
+  			}
+
+  		});
+  	$("[name=lname]").keyup(function()
+  		{  if($('[name=lname]').val() != "") 
+  			{
+  				b=1;
+  			} 
+  			else
+  				{b=0;}
+  			if(a==1 && b==1 && c==1)
+  			{
+  				$('[name=but]').removeAttr("disabled");
+  			}
+  			else
+  			{
+  				$('[name=but]').attr('disabled','disabled');
+  			}
+
+  		});
+  	$("[name=pass]").keyup(function()
+  		{    if($('[name=pass]').val() != "") 
+  			{
+  				c=1;
+  			} 
+  			else
+  				{c=0;}
+  			if(a==1 && b==1 && c==1)
+  			{
+  				$('[name=but]').removeAttr("disabled");
+  			}
+  			else
+  			{
+  				$('[name=but]').attr('disabled','disabled');
+  			}
+
+
+  		});
+
+  	$("[name=but]").on('click', function(){
+		alert("Button enabled");
+	});
+});
+
+
+	
+</script>
+</head>
+<body>
+<table>
+		<tr>
+			<td>First Name :</td>
+			<td><input name="fname" type="text"></td>
+			
+		</tr>
+		
+		<tr>
+			<td>Last Name :</td>
+			<td><input type="text" name="lname" placeholder="Last Name"></td>
+			
+		</tr>
+		<tr>
+			<td>Password :</td>
+			<td><input type="password" name="pass" placeholder="Password"></td>
+			
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<button  name="but" type="submit" disabled>Click me</button>
+			</td>
+		</tr> 
+	</table>
+</body>
+</html>

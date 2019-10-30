@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$('#btn').click(function(){
+					 $('option').remove();
+					 $('select').append('<option value="volvo">Default</option>');
+				});
+
+			});
+	</script>
+</head>
+<body>
+<select>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+<button id="btn">Do it !!!</button>
+</body>
+</html>

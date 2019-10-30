@@ -1,0 +1,17 @@
+var users = [{
+  
+  id: 1,
+  uid: 'admin',
+  upa: '1234',
+  uty: 'Administrator'
+}, {
+  id: 2,
+  uid: 'user',
+  upa: 'asdf',
+  uty: 'User'
+}, {
+  id: 3,
+  uid: 'client',
+  upa: 'aaaa',
+  uty: 'Services'
+}];

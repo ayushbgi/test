@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 3.Write a program to find the whether the given no is prime no? -->
+	<title></title>
+	<script type="text/javascript">
+		function calc()
+	{
+		var a=document.getElementById('n1').value;
+		var p=0;
+		for (var i = 2; i <= a/2; i++) 
+		{
+			if (a%i==0)
+			 {p=1;
+			 	break;}
+		}
+		if (p==0) 
+			{document.getElementById("out").innerHTML=a+" is PRIME !!";
+	}
+		else
+			document.getElementById("out").innerHTML=a+" is NOT PRIME !!";
+	}
+	</script>
+</head>
+<body>
+<h1>Enter num to check PRIME !</h1>
+	<input type="number" id="n1" placeholder="Num" >
+	<button type="button" onclick="calc()">Click me</button>
+		<p id="out"></p>
+</body>
+</html>

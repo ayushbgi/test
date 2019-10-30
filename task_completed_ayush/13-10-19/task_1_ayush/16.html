@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var sln = txt.length;
+    alert("var txt = ABCDEFGHIJKLMNOPQRSTUVWXYZ  var sln = txt.length "+ sln);
+
+    var str = "Please locate where 'locate' occurs!";
+	var pos = str.indexOf("locate");
+	alert(" var str = Please locate where 'locate' occurs! var pos = str.indexOf "+pos);
+
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+alert(pos);
+
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);
+alert("Please locate where 'locate' occurs! "+res);
+
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(-12, -6);
+alert("Apple, Banana, Kiwi "+res);
+
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);
+alert(res);
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);
+alert(res);
+
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7);
+alert(res);
+
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+alert(n);
+
+var text1 = "Hello World!";       
+var text2 = text1.toUpperCase();  
+alert(text2);
+</script>
+</body>
+</html>

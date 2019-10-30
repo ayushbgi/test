@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+				$('#mytxt').keyup(function(key){
+					$('#opt').remove();
+					 if (key.keyCode >= 48 && key.keyCode <= 57)
+						{
+					     //can submit
+					    }
+					    else
+					    {
+					    	$('body').append('<div>Error!!</div>');
+					    }
+
+										
+				});
+
+				
+			});
+	</script>
+
+</head>
+<body>
+<textarea id="mytxt"></textarea>
+<div id="opt"></div>
+</body>
+</html>

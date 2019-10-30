@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+
+
+
+
+</head>
+<body>
+	<h1>Input Validation</h1>
+	<h2>Check for Empty(blank) or Invalid(wrong) inputs!</h2>
+	<table>
+		<tr>
+			<td>First Name :</td>
+			<td><input type="name" id="fname" placeholder="First Name"></td>
+			<td><p style="visibility: hidden; color: red;" id="o1"></p></td>
+		</tr>
+		<tr>
+			<td>Last Name :</td>
+			<td><input type="name" id="lname" placeholder="Last Name"></td>
+			<td><p style="visibility: hidden; color: red;" id="o2"></p></td>
+		</tr>
+		<tr>
+			<td>Password :</td>
+			<td><input type="password" id="pass" placeholder="Password"></td>
+			<td><p style="visibility: hidden; color: red;" id="o3"></p></td>
+		</tr>
+		<tr>
+			<td>Age :</td>
+			<td><input type="date" id="age"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<button type="button" onclick="fun()">Validate</button>
+			</td>
+		</tr>
+	</table>
+<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	
+
+</body>
+<footer>
+		<script type="text/javascript">
+		
+		function fun()
+		{   
+			var fn = document.getElementById('fname').value;
+			var ln = document.getElementById('lname').value;
+			var pa = document.getElementById('pass').value;
+			var ag = document.getElementById('age').value;
+		
+			pa=String(pa);
+
+
+			var fnv=/^[A-Za-z]+$/;
+			var lnv=/^[A-Za-z]+$/;
+			var pav=/^[A-Za-z0-9]+$/;
+
+
+			if (fn=="") 
+				{	
+					document.getElementById('o1').innerHTML="Cant be empty !";	
+					document.getElementById('o1').style.visibility = 'visible';
+				}
+
+				else
+				{
+					document.getElementById('o1').style.visibility = 'hidden';
+					if(!fn.match(fnv))
+					{
+					document.getElementById('o1').innerHTML="Not valid input!";
+					document.getElementById('o1').style.visibility = 'visible';
+
+					}
+				}
+
+
+			if (ln=="") 
+				{		
+					document.getElementById('o2').innerHTML="Cant be empty !";	
+					document.getElementById('o2').style.visibility = 'visible';
+				}
+				else
+				{
+					document.getElementById('o2').style.visibility = 'hidden';
+					if(!ln.match(lnv))
+					{
+					document.getElementById('o2').innerHTML="Not valid input!";
+					document.getElementById('o2').style.visibility = 'visible';
+
+					}
+				}
+				
+			if (pa=="") 
+				{		
+					document.getElementById('o3').innerHTML="Password Cant be empty !";	
+					document.getElementById('o3').style.visibility = 'visible';
+				}
+				else
+				{   
+					document.getElementById('o3').style.visibility = 'hidden';
+					if(!pa.match(pav))
+					{
+					document.getElementById('o3').innerHTML="Not valid input!";
+					document.getElementById('o3').style.visibility = 'visible';
+
+					}
+					
+				if(pa.length<8)
+					{
+					document.getElementById('o3').innerHTML="Min 8 digits req!";
+					document.getElementById('o3').style.visibility = 'visible';
+
+					}
+					else
+					{
+						document.getElementById('o3').innerHTML="";
+
+					document.getElementById('o3').style.visibility = 'hidden';
+					}
+				}
+
+			
+		
+		}
+
+
+
+	
+	</script>
+</footer>
+</html>

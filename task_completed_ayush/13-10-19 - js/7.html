@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function calc()
+	{
+	
+		var f=document.getElementById('tem').value;
+		var c= f - 32;
+		c= c/1.8;
+		document.getElementById("out").innerHTML=f+" Faherenheit(F) = "+c+" Degree Celcious(C)";
+
+}
+	</script>
+	<title></title>
+</head>
+<body>
+	<h1>Convert (F) to (C)! degree </h1>
+	<input type="number" id="tem" placeholder="Temp in F" >
+	<button type="button"
+onclick="calc()">
+Click me</button>
+		<p id="out"></p>
+</body>
+</html>

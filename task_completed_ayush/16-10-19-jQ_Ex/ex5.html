@@ -1,0 +1,17 @@
+<html> <head>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({left:"100px"},"slow");
+    $("div").animate({fontSize:"3em"},"slow");
+    $("div").animate({top:"100px"},"slow");
+    $("div").animate({fontSize:"2em"},"slow");
+     $("div").animate({left:"200px"},"slow");
+  });
+});
+</script> </head> <body>
+<button>Start Animation</button>
+<br /><br />
+<div style="background:#98bf21;height:100px;width:200px;position:relative"> Happy Diwali</div>
+</body> </html>

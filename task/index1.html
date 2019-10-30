@@ -1,0 +1,44 @@
+
+<html>
+<head>
+<title>Hello World in JavaScript</title>
+<script type="text/javascript">
+function validate() {
+var inttemplate = /^[0-9]+$/;
+var strtemplate = /^[a-zA-Z .]+$/;
+//var strtemplate = /^[a-z A-Z.]+$/;
+//var strtemplate = /^[A-Za-z. ]+$/;
+	var fname = document.getElementById('txtfname').value;
+	var age = document.getElementById('txtage').value;
+	if(!strtemplate.test(fname)) {
+		alert('Please enter First Name as string');
+		document.getElementById('txtfname').focus();
+		return false;
+	}
+	if(!inttemplate.test(age)) {
+		alert('Please enter age in number');
+		document.getElementById('txtage').focus();
+	}
+}
+</script>
+</head>
+<body>
+<h1> My Form</h1>
+<form id="myfrm" action="#" method="get" onsubmit="validate();">
+	<table>
+		<tr>
+			<td>First Name</td>
+			<td><input type="text" id="txtfname" /></td>
+		</tr>
+		<tr>
+			<td>Age</td>
+			<td><input type="text" id="txtage" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="Validate Form" /></td>
+		</tr>
+	</table>
+</form>
+</body>
+
+</html>

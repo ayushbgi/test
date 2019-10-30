@@ -1,0 +1,61 @@
+<html> <head>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    //$("tbody tr:even").css("background-color" , 'red');
+	//$("tbody tr:odd").css("background-color" , 'yellow');
+	var total = 0;
+	var qty, price;
+	var jsonval = {'stud1' : '35%', 'stud2' : '15%', 'stud3' : '4%', 'stud4' : '70%'};
+	$.each(jsonval, function(key, value){
+		alert(key);
+	});
+	return false;
+	$('tbody tr').each(function(){
+		qty = $(this).find('td:nth-child(3)').text();
+		price = $(this).find('td:nth-child(4)').text();
+		total = qty * price;
+		$(this).find('td:nth-child(5)').text(total);
+	});
+  });
+});
+</script> </head>
+
+<body>
+<button>Click me</button>
+<table>
+<thead>
+<tr>
+	<td>S.no</td>
+	<td>Item Name</td>
+	<td>Qty</td>
+	<td>Price</td>
+	<td>Total</td>
+</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>1</td>
+		<td>Item 1</td>
+		<td>5</td>
+		<td>10</td>
+		<td>?</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Item 2</td>
+		<td>12</td>
+		<td>5</td>
+		<td>?</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Item 3</td>
+		<td>1</td>
+		<td>3</td>
+		<td>?</td>
+	</tr>
+</tbody>
+</table>
+</body> </html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | My Quiz</title>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="data/quiz.json"></script>
+	<script type="text/javascript">
+var score=0;
+var arr=[0,0,0,0,0];
+			function reset()
+			{
+				location.reload();
+			}
+			
+			function quiz(count)
+					{
+						if (count==0){$("#pre").attr("disabled", true);}
+						else if (count == 4) {$("#nxt").attr("disabled", true);}
+						else
+						{
+							$('#nxt').attr("disabled", false);
+							$('#pre').attr("disabled", false);
+						}
+						document.getElementById("ques").innerHTML="Q "+(count+1)+" : "+ques[count].qu;
+						document.getElementById("optsa").innerHTML='<input type="radio" name="quiz" value="a"> A) '+ques[count].a;
+						document.getElementById("optsb").innerHTML='<input type="radio" name="quiz" value="b"> B) '+ques[count].b;
+						document.getElementById("optsc").innerHTML='<input type="radio" name="quiz" value="c"> C) '+ques[count].c;
+						document.getElementById("optsd").innerHTML='<input type="radio" name="quiz" value="d"> D) '+ques[count].d;
+					};
+
+			function result(score)
+			{	
+					var op;
+					switch(score){
+							case 1: op="Poor";
+									break;
+							case 2: op="Fair";
+									break;
+							case 3: op="Good";
+									break;
+							case 4: op="Very Good";
+									break;
+							case 5: op="Excellent";
+									break;		
+
+						}
+
+					document.getElementById("ques").innerHTML="Your score = "+(score);
+						document.getElementById("optsa").innerHTML=op;
+						document.getElementById("optsb").innerHTML='';
+						document.getElementById("optsc").innerHTML='';
+						document.getElementById("optsd").innerHTML='';
+						document.getElementById("opt").innerHTML='<button id="try" class="try" onclick="reset()">Try Again</button>';
+						
+						
+			};		
+
+
+			if(sessionStorage.getItem("name"))
+			{
+				//alert("Login Success !  Hello "+sessionStorage.getItem("name"));
+				$(document).ready(function(){
+					document.getElementById("result").innerHTML = sessionStorage.getItem("name");
+					$('#bout').click(function(){
+						alert("Are you sure !! <br> Press ok to exit portal !");
+						window.localStorage.removeItem("name");
+						window.open("index.html","_self");
+					});
+
+					var count=0;
+					
+					var ans=" ";
+					quiz(count);
+					
+					
+
+					$('#nxt').click(function(){
+						ans=$("input[name=quiz]:checked").val();
+						if(ans==ques[count].an)
+						{   
+							score++;
+							
+						}
+						count=count+1;
+						if(count>4){count=4;}
+						quiz(count);
+					});
+
+
+
+
+
+					$('#pre').click(function(){
+
+						score--;
+						count=count-1;
+						if(count<0){count=0; score=0;}
+						quiz(count);
+					});
+
+
+
+
+					$('#fin').click(function(){
+						$('#try').removeAttr("style");
+						ans=$("input[name=quiz]:checked").val();
+						if(ans==ques[count].an)
+						{   
+							score++;
+							
+						}
+						
+						
+						result(score);
+					});
+
+				});
+				
+
+			}
+			else
+			{
+				alert("Login");
+				window.open("index.html","_self");
+			}
+	
+
+
+	</script>
+</head>
+<body>
+<div class="topr">
+	Username:<span id="result"></span><br>
+	<button id="bout" type="submit">Logout</button>
+</div>
+<div>
+	<div id="ques"></div>
+	<div id="optsa"></div>
+	<div id="optsb"></div>
+	<div id="optsc"></div>
+	<div id="optsd"></div>
+	<div id="opt">
+		<button id="pre">Previous</button>
+		<button id="nxt">Next</button>
+		<button id="fin">Finish</button>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$('#clk1').click(function(){
+					 $(".link").attr('href','https://www.google.com/');
+				});
+
+				$('#clk2').click(function(){
+					 $(".link").attr('href','https://www.yahoo.com/');
+				});
+				
+			});
+	</script>
+
+</head>
+<body>
+	<a class="link" href="http://example.com">Check mee </a><br><br>
+<button id="clk1">Google !</button><br>
+<button id="clk2">Yahoo  !</button>
+Click button to change address of the link.
+</body>
+</html>

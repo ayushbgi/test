@@ -1,0 +1,32 @@
+<html> <head>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  
+  $("button").click(function(){
+    //$('div').slideToggle(500);
+    
+	//$('div').toggle(2000, function(){
+	//	alert('test')
+	//});
+	
+	$('div').fadeTo(2000, 0.5);
+	//alert('test');
+  });
+  
+  $('p').click(function(){
+	$('button').trigger('click');
+  });
+});
+</script>
+</head>
+<body>
+
+<h3>jquery training</h3>
+<div style="display:none;">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+</div>
+<button>Click Me</button>
+<p>Trigger button event</p>
+</body></html>
+

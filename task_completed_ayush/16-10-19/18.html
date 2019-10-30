@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				var count = 15;
+				$('#txta').keyup(function(key){
+					$('#outp').append(String.fromCharCode(key.keyCode));
+});
+			});
+	</script>
+</head>
+<body>
+	Input in textbox to check the change!
+<textarea id="txta" ></textarea>
+<div id="outp"></div> 
+</body>
+</html>

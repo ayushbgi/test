@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$('#clk').click(function(){
+						$('a').attr('style', 'cursor:not-allowed');
+
+				});
+
+			});
+	</script>
+</head>
+<body>
+<a href="google.com">link 1</a><br><br>
+<a href="">link 2</a><br><br>
+<a href="">link 3</a><br><br>
+<a href="">link 4</a><br><br>
+<a href="">link 5</a><br><br>
+<a href="">link 6</a><br><br>
+<button id="clk">Disable the link 1</button>
+</body>
+</html>

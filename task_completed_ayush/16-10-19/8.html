@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$("#clk").click(function(){
+					$("#div1").appendTo('#div2');
+				});
+			});
+	</script>
+</head>
+<body>
+<div id="div1" style="height: 100px;background-color: green"> This is div 1 !</div>
+<div id="div2" style=" height: 300px;background-color: grey">This is div 2 !</div>
+<button id="clk">Move Div 1 in Div 2 !!</button>
+</body>
+</html>

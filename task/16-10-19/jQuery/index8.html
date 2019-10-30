@@ -1,0 +1,70 @@
+<html> <head>
+<style>
+.error{
+	color: red;
+}
+</style>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#validatefrm").submit(function(){
+		$('.error').remove();
+		var strtemplate = /^[a-zA-Z .]+$/;
+		if(!strtemplate.test($('input[name=name]').val())){
+			$('input[name=name]').after('<div class="error">Enter name in proper format</div>');
+		} else {
+			$('input[name=name]').parent().find('div.error').remove();
+		}
+		if($('input[name=gender]:checked').val() == undefined) {
+			$('input[name=gender]').parent().append('<div class="error">Select Gender</div>');
+		} else {
+			$('input[name=gender]').parent().find('.error').remove();
+		}
+		
+		if($('[name=textarea]').val() == '') {
+			$('[name=textarea]').after('<div class="error">Enter your message</div>');
+		} else {
+			$('[name=textarea]').parent().find('.error').remove();
+		}
+		
+		if($('select[name=selectval]').val() == 0) {
+			$('select[name=selectval]').after('<div class="error">Choose from list</div>');
+		} else {
+			$('select[name=selectval]').parent().find('.error').remove();
+		}
+		return false;
+	});
+});
+</script> </head>
+
+<body>
+
+<form id="validatefrm" autocomplete="off" method="GET">
+	<div>
+		<input name="name" type="text" value="" />
+	</div> 
+	<div>
+	<input name="gender" type="radio" value="M" /> Male
+	<input name="gender" type="radio" value="F" /> Female <br />  
+	</div>
+	<div>
+	<textarea name="textarea" cols="30" rows="2"></textarea><br /> 
+	</div>
+	<div>
+	<select name="selectval">
+		<option value="0">Choose a value from list</option>
+		<option value="1">Yes</option>
+		<option value="2">No</option>
+	</select>
+	</div>
+	<div>
+	<input name="democheckbox" type="checkbox" name="chkdemo" value="1" /> Checkbox<br /> 
+	<input name="democheckbox" type="checkbox" name="chkdemo" value="2" /> Checkbox<br /> 
+	<input name="democheckbox" type="checkbox" name="chkdemo" value="3" /> Checkbox<br /> 
+	<input name="democheckbox" type="checkbox" name="chkdemo" value="4" /> Checkbox<br /> 
+	</div>
+	<div>
+	<button type="submit" value="Submit">Submit</button>
+	</div>
+</form>
+</body> </html>

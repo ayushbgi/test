@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	function calc()
+	{
+		var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    	var sln = txt.length;
+   		document.getElementById("out").innerHTML="var txt = ABCDEFGHIJKLMNOPQRSTUVWXYZ  var sln = txt.length "+ sln;
+   		var str = "Please locate where 'locate' occurs!";
+		var pos = str.indexOf("locate");
+		document.getElementById("out1").innerHTML=" var str = Please locate where 'locate' occurs! var pos = str.indexOf "+pos;
+		var str = "Please locate where 'locate' occurs!";
+		var pos = str.search("locate");
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);
+	document.getElementById("out2").innerHTML=pos;
+	document.getElementById("out3").innerHTML="Please locate where 'locate' occurs! "+res;
+}
+	
+</script>
+</head>
+<body>
+
+<button type="button"onclick="calc()">Click me</button>
+		<p id="out"></p>
+		<p id="out1"></p>
+		<p id="out2"></p>
+		<p id="out3"></p>
+		
+</body>
+</html>

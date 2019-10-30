@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				var count = 15;
+				$('#txta').attr( 'maxlength:15');
+				$('#txta').keyup(function(){
+  				var x = 15 - $(this).val().length;
+  				$('#outp').text(x);
+});
+			});
+	</script>
+</head>
+<body>
+<textarea id="txta" maxlength=15></textarea>
+<div id="outp">15</div> Remaining 
+</body>
+</html>

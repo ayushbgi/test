@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | My Quiz</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="data/quiz.json"></script>
+	<script type="text/javascript">
+		//defining all variables as global
+var score=0;
+var arr=[0,0,0,0,0];
+		//reset function to reset quiz
+			function reset()
+			{
+				location.reload();
+			}
+
+			//function to display the question according to data in json
+			
+			function quiz(count)
+					{
+						if (count==0){$("#pre").attr("disabled", true);}
+						else if (count == 4) {$("#nxt").attr("disabled", true);}
+						else
+						{
+							$('#nxt').attr("disabled", false);
+							$('#pre').attr("disabled", false);
+						}
+						document.getElementById("ques").innerHTML="Q "+(count+1)+" : "+ques[count].qu;
+						document.getElementById("optsa").innerHTML='<input type="radio" name="quiz" value="a"> A) '+ques[count].a;
+						document.getElementById("optsb").innerHTML='<input type="radio" name="quiz" value="b"> B) '+ques[count].b;
+						document.getElementById("optsc").innerHTML='<input type="radio" name="quiz" value="c"> C) '+ques[count].c;
+						document.getElementById("optsd").innerHTML='<input type="radio" name="quiz" value="d"> D) '+ques[count].d;
+
+						if(arr[count]!=0)
+						{
+							$('input:radio[name="quiz"][value='+arr[count]+']').prop('checked', true);
+						}
+					};
+
+		    //checking the user answers with the json file
+
+			function result()
+			{	
+					var op="Very poor";
+					var score=0;
+					for (var i = 0; i < 5; i++) 
+					{
+						if(arr[i]==ques[i].an)
+							score++;
+					}
+						//switch to assign the appriatiation depending upon the score
+					switch(score){
+							case 1: op="Poor";
+									break;
+							case 2: op="Fair";
+									break;
+							case 3: op="Good";
+									break;
+							case 4: op="Very Good";
+									break;
+							case 5: op="Excellent";
+									break;		
+
+			}
+
+					document.getElementById("ques").innerHTML="QUIZ RESULT<br>Your score = "+(score)+" out of 5 .";
+						document.getElementById("optsa").innerHTML=op;
+						document.getElementById("optsb").innerHTML='';
+						document.getElementById("optsc").innerHTML='';
+						document.getElementById("optsd").innerHTML='';
+						document.getElementById("opt").innerHTML='<button id="try" class="try" onclick="reset()">Try Again</button>';
+						
+						
+			};		
+           //checking the active session else throw back error !!!! cant accessed without auth on login
+
+			if(sessionStorage.getItem("name"))
+			{
+				
+				$(document).ready(function(){
+					document.getElementById("result").innerHTML = sessionStorage.getItem("name");
+					//logout listner , clears session
+					$('#bout').click(function(){
+						alert("Are you sure !!  Press ok to exit portal !");
+						window.localStorage.removeItem("name");
+						window.open("index.html","_self");
+					});
+
+					var count=0;
+					
+					var ans=" ";
+					quiz(count);
+					
+					
+					//next button listner
+
+					$('#nxt').click(function(){
+						ans=$("input[name=quiz]:checked").val();
+						arr[count]=ans;
+						count=count+1;
+						if(count>4){count=4;}
+						quiz(count);
+					});
+
+
+
+					//previous button listner
+
+					$('#pre').click(function(){
+
+						
+						count=count-1;
+						if(count<0){count=0; score=0;}
+						quiz(count);
+					});
+
+
+					//finish button listner
+
+					$('#fin').click(function(){
+						$('#try').removeAttr("style");
+						ans=$("input[name=quiz]:checked").val();
+						arr[count]=ans;	
+						result();
+					});
+
+				});
+				
+
+			}
+			//To check the session throw to login page
+			else
+			{
+				alert("Login");
+				window.open("index.html","_self");
+			}
+	
+
+
+	</script>
+</head>
+<body class="mybody">
+<div class="float-right m-5">
+	Username:<span id="result"></span><br>
+	<button id="bout" type="submit">Logout</button>
+</div>
+<div  id="ques" class="ques"></div>
+<br><br>
+<div class="opt">
+	
+	<div id="optsa"></div>
+	<div id="optsb"></div>
+	<div id="optsc"></div>
+	<div id="optsd"></div>
+	<div id="opt" class="mt-5">
+		<button id="pre">Previous</button>
+		<button id="nxt">Next</button>
+		<button id="fin">Finish</button>
+	</div>
+</div>
+</body>
+</html>

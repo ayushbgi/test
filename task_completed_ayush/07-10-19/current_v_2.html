@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table border="1" >
+	<tr>
+		<td colspan="4">
+			1 Surname (Family name) (x)<br>
+			<input type="text" name="sname">
+		</td>
+		<td rowspan="17">
+			For official use only<br><br>
+			Date of application:<br><br>
+			Visa application number:<br><br>
+			Application lodged at<br>
+			<input type="checkbox" class="radio" value="Embassy" name="Embassy" />Embassy/consulate</label><br>
+		<input type="checkbox" class="radio" value="CAC" name="CAC" />CAC</label><br>
+		<input type="checkbox" class="radio" value="Service" name="Service" />Service provider</label><br>
+		<input type="checkbox" class="radio" value="Commercial" name="Commercial" />Commercial intermediary</label><br>
+		<input type="checkbox" class="radio" value="Border" name="Border" />Border</label><br><br>
+		Name:<br><br>
+		<input type="checkbox" class="radio" value="1" name="a" />Other</label><br><br>
+		File handled by:<br><br>
+		Supporting documents:<br>
+		<input type="checkbox" class="radio" value="tds" name="tds" />Travel document</label><br>
+		<input type="checkbox" class="radio" value="mos" name="mos" />Means of subsistence</label><br>
+		<input type="checkbox" class="radio" value="inv" name="inv" />Invitation</label><br>
+		<input type="checkbox" class="radio" value="mot" name="mot" />Means of transport</label><br>
+		<input type="checkbox" class="radio" value="tmi" name="tmi" />TMI</label><br>
+		<input type="checkbox" class="radio" value="sdo" name="sdo" />Others:</label><br><br>
+		Visa decision:<br>
+		<input type="checkbox" class="radio" value="ref" name="ref" />Refused</label><br>
+		<input type="checkbox" class="radio" value="iss" name="iss" />Issued:</label><br>
+		<input type="checkbox" class="radio" value="aaa" name="aaa" />A</label><br>
+		<input type="checkbox" class="radio" value="ccc" name="ccc" />C</label><br>
+		<input type="checkbox" class="radio" value="ltv" name="ltv" />LTV</label><br><br>
+		<input type="checkbox" class="radio" value="valid" name="valid" />Valid</label><br><br>
+		From<br><br>
+		-----------------------<br>
+		Until<br><br>
+		-----------------------<br><br>
+		Number of entries:<br>
+		<input type="checkbox" class="radio" value="1" name="noe1" />1</label>
+		<input type="checkbox" class="radio" value="2" name="noe2" />2</label>
+		<input type="checkbox" class="radio" value="4" name="noe4" />Multiple</label><br><br>
+		Number of days:<br><br>
+		-----------------------
+
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			2 Surname at birth (Former family name(s))(x)<br>
+			<input type="text" name="sbname">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			3 First name(s)(x)<br>
+			<input type="text" name="name">
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">
+			4 Date of birth (date-month-year)<br>
+			<input type="date" name="dob">
+		</td>
+		<td>
+			5 Place of birth <br>
+			<input type="text" name="pob">
+		</td>
+		
+		<td rowspan="2" >
+			7 Current nationality
+			  Nationality at birth, if different:
+			 <br>
+			<input type="text" name="nab">
+		</td>
+	</tr>
+	<tr>
+		<td>6 Country of birth <br>
+			<input type="text" name="country">
+		</td>
+	<tr>
+		<td>8 Sex<br>
+		<input type="radio" class="radio" value="1" name="same" />Male</label>
+		<input type="radio" class="radio" value="1" name="same" />Female</label> 
+		</td>
+	
+		<td colspan="3">9 Marital status<br>
+		<input type="checkbox" class="radio" value="mss" name="mss" />Single</label>
+		<input type="checkbox" class="radio" value="msm" name="msm" />Married</label> 
+		<input type="checkbox" class="radio" value="msse" name="msse" />Separated</label>
+		<input type="checkbox" class="radio" value="msd" name="msd" />Divorced</label>
+		<input type="checkbox" class="radio" value="msw" name="msw" />Widow(er)</label>
+		<input type="checkbox" class="radio" value="mso" name="mso" />Other</label>
+		</td>
+		
+	</tr>
+	<tr>
+		<td colspan="4">
+			10 In the case of the minor : susrname, first name ,address(if different from applicant's) and nationality of parental authority/legal gurdian.<br>
+			<input type="text" name="minor">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			11 National identity number,where applicable<br>
+			<input type="text" name="nin">
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="4">12 <br>
+		<input type="checkbox" class="radio" value="op" name="op" />Ordinary passport</label>
+		<input type="checkbox" class="radio" value="dp" name="dp" />Diplomatic passport</label> 
+		<input type="checkbox" class="radio" value="sp" name="sp" />Service passport</label>
+		<input type="checkbox" class="radio" value="op" name="op" />Official passport</label>
+		<input type="checkbox" class="radio" value="spp" name="spp" />Special passport</label>
+		<input type="checkbox" class="radio" value="odd" name="odd" />Other doc</label>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			13 Number of travell document<br>
+			<input type="number" name="pnr">
+		</td>
+		<td>
+			14 	Date of issue<br>
+			<input type="date" name="doi">
+		</td>
+		<td>
+			15 Valid until<br>
+			<input type="date" name="vud">
+		</td>
+		<td>
+			16 Issued by<br>
+			<input type="text" name="dib">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			17 Applicants home address, e-mail address<br>
+			<input type="text" name="eadd">
+		</td>
+		<td>
+			Telephone number<br>
+			<input type="number" name="tel">
+		</td>
+		
+	</tr>
+	<tr>
+		<td colspan="4">
+			18 Residence in a country outher than the country of current nationality<br>
+			<input type="checkbox" class="radio" value="no" name="no" />No</label><br>
+		<input type="checkbox" class="radio" value="y" name="y" />Yes. </label>
+		Residence permit or equivalent No
+			<input type="number" name="rpn">
+			Valid until <input type="date" name="dvi">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			*19 Current occupation<br>
+			<input type="text" name="occ">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			*20 Employer and employer's address and telephone number. For students, name and address of educational establishment.<br>
+			<input type="text" name="brief">
+		</td>
+	</tr>		
+<tr>
+		<td colspan="4">21 Main purpose(s) of the journey:<br>
+		<input type="checkbox" class="radio" value="tour" name="tour" />Tourism</label>
+		<input type="checkbox" class="radio" value="buis" name="buis" />Buisness</label> 
+		<input type="checkbox" class="radio" value="vfof" name="vfof" />Visiting family or friends</label>
+		<input type="checkbox" class="radio" value="cult" name="cult" />Cultural</label>
+		<input type="checkbox" class="radio" value="spor" name="spor" />Sports</label><br>
+		<input type="checkbox" class="radio" value="ofvi" name="ofvi" />Official visit</label><br>
+		<input type="checkbox" class="radio" value="mere" name="mere" />Medical resons</label><br>
+		<input type="checkbox" class="radio" value="stdy" name="stdy" />Study</label>
+		<input type="checkbox" class="radio" value="tran" name="tran" />Transit</label> 
+		<input type="checkbox" class="radio" value="aitr" name="aitr" />Airport transit</label>
+		<input type="checkbox" class="radio" value="ooth" name="ooth" />Other</label>
+
+
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			22 Member State(s) of destination<br>
+			<input type="text" name="mename">
+		</td>
+		<td colspan="2">
+			23 Member State of first entry<br>
+			<input type="text" name="msname">
+		</td>
+	</tr>
+
+	<tr>
+		<td colspan="2">
+			24 Number of entries requested<br>
+			<input type="checkbox" class="radio" value="sien" name="sien" />Single entry</label>
+			<input type="checkbox" class="radio" value="twen" name="twen" />Two entries</label><br>
+			<input type="checkbox" class="radio" value="muen" name="muen" />Multiple entries</label>
+		</td>
+		<td colspan="2">
+			25 Duratipon of the intended stay or transit<br>
+			Indicate number of days<br>
+			<input type="number" name="days">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			The fields marked with * shall not be filled in by family members of EU,EEA OR CH citizens(spouse, child or depends ascendant) while exercising their right<br>
+			to free movement.
+
+			(x)Fields 1-3 shall be filed in accordance with the data in the travel document.
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			26 Schengen visas issued during the past three years<br>
+			<input type="checkbox" class="radio" value="no" name="a" />No</label><br>
+			<input type="checkbox" class="radio" value="no" name="a" />Yes</label>. Date(s)of validity from <input type="date" name="vfod"> to <input type="date" name="vfod2">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			27 Fingerprints collected priviously for the purpose of applying for a Schengen visa<br>
+			<input type="checkbox" class="radio" value="no" name="a" />No</label>
+			<input type="checkbox" class="radio" value="yes" name="a" />Yes</label><br>
+			<input type="date" name="knda">Date, if known
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			28 Entry permit for the final country of destination , where applicable<br>
+			Issued by <input type="text" name="sname">
+			Valid Date From <input type="text" name="sname">
+			until <input type="text" name="sname">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			29 Intended date of arrival in the Schengen area<br>
+			<input type="text" name="sname">
+			
+		</td>
+		<td colspan="2">
+			30 Intended date of departure from the Schengen area<br>
+			<input type="text" name="sname">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			*31 Surname and first name of inviting person(s) in the Member State(s).If not applicable, name of hotel(s) or temporary<br> accomadation(s) in the Member State(s)<br>
+			<input type="text" name="sname">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			Address and e-mail address of inviting company/organisation<br>
+			<input type="text" name="sname">
+			
+		</td>
+		<td colspan="2">
+			Telephone or telefax<br>
+			<input type="text" name="sname">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			*32 name and address and e-mail address of inviting company/organisation<br>
+			<input type="text" name="sname">
+			
+		</td>
+		<td colspan="2">
+			Telephone and telefax of company<br>
+			<input type="text" name="sname">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			 Surname and first name of inviting person(s) in the Member State(s).If not applicable, name of hotel(s) or temporary accomadation(s) in the Member State(s)<br>
+			<input type="text" name="sname">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			 *33 Cost of travelling and living during the applicants is covered<br>
+			<input type="text" name="sname">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input type="checkbox" class="radio" value="1" name="a" />by the applicant himself/herself</label><br><br><br>
+			Means of support<br>
+			<input type="checkbox" class="radio" value="1" name="a" />Cash</label><br>
+			<input type="checkbox" class="radio" value="1" name="a" />Traveller's checques</label><br>
+			<input type="checkbox" class="radio" value="1" name="a" />Credit Card</label><br>
+			<input type="checkbox" class="radio" value="1" name="a" />Prepaid accomadation</label><br>
+			<input type="checkbox" class="radio" value="1" name="a" />Prepaid transport</label><br>
+			<input type="checkbox" class="radio" value="1" name="a" />Others</label><br>
+
+			
+		</td>
+		<td colspan="2">
+			<input type="checkbox" class="radio" value="1" name="a" />by a sponsor, please specify</label><br>
+			<input type="text" name="sname"><input type="checkbox" class="radio" value="1" name="a" />referred to in 31 or 32</label><br>
+			<input type="text" name="sname"><input type="checkbox" class="radio" value="1" name="a" />other</label><br><br>
+			Means of support<br>
+			<input type="checkbox" class="radio" value="cash" name="cash" />Cash</label><br>
+			<input type="checkbox" class="radio" value="acdp" name="acdp" />Accommodation provided</label><br>
+			<input type="checkbox" class="radio" value="aed" name="aed" />All expencescovered during the stay</label><br>
+			<input type="checkbox" class="radio" value="prt" name="prt" />Prepaid transport</label><br>
+			<input type="checkbox" class="radio" value="o" name="o" />Other</label><br>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			34 Personal data of the family member who is an EU,EEA Or CH citizen<br>
+			<input type="text" name="pbrief">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			Surname<br>
+			<input type="text" name="sname">
+			
+		</td>
+		<td colspan="2">
+			First name(s)<br>
+			<input type="text" name="fname">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="1">
+			Date of birth<br>
+			<input type="data" name="dobb">
+			
+		</td>
+		<td colspan="2">
+			Nationality<br>
+			<input type="text" name="nation">
+			
+		</td>
+		<td colspan="1">
+			Number of travel documents or ID<br>
+			<input type="text" name="noid">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			35 Family relationship with an EU,EEA or CH citizen<br>
+			<input type="checkbox" class="radio" value="spo" name="spo" />spouce</label>
+			<input type="checkbox" class="radio" value="chi" name="chi" />child</label>
+			<input type="text" name="fro">
+			<input type="checkbox" class="radio" value="grc" name="grc" />grand child</label>
+			<input type="checkbox" class="radio" value="dea" name="dea" />dependent ascendant</label>
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			36 Place and date<br>
+			<input type="text" name="pad">
+			
+		</td>
+		<td colspan="2">
+			37 Signature<br>
+			<input type="text" name="sig">
+			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			I am aware that the visa fee is not refunded if the visa is refused.
+			
+		</td>
+	</tr>
+
+</table>
+</body>
+</html>

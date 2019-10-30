@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function calc()
+	{
+		
+		var r=document.getElementById('r').value;
+		var h=document.getElementById('h').value;
+		var c= Math.PI*r*r;
+		c= c+(2*Math.PI*r*h);
+		
+		document.getElementById("out").innerHTML="Area = "+c;
+	}
+
+	</script>
+</head>
+<body>
+	<input type="number" id="r" placeholder="Radius" ><br>
+	<input type="number" id="h" placeholder="Height" ><br>
+	<button type="button"
+onclick="calc()">
+Click me</button>
+		<p id="out"></p>
+</body>
+</html>

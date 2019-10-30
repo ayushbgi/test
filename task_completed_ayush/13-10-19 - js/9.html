@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<script type="text/javascript">
+			function calc()
+	{
+		    var a = document.getElementById('n').value;
+			var b, c = 0;
+			var z = a;
+			while(a > 0)
+			{
+ 				 b = a % 10;
+  				c = c * 10 + b;
+  				a = parseInt(a / 10);
+			}
+			document.getElementById("out").innerHTML=c;
+			
+		}
+
+
+	</script>
+</head>
+<body>
+	<h1>Reverse Num</h1>
+<input type="number" id="n" placeholder="Num" >
+	<button type="button"
+onclick="calc()">
+Click me</button>
+		<p id="out"></p>
+</body>
+</html>

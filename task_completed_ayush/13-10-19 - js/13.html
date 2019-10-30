@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 13.Write a program to find the convert the given number of days to month and days? -->
+	<title></title>
+</head>
+<body>
+    <h1>Convert days to month & days!</h1>
+
+	<input type="number" id="days" placeholder="Days" >
+	<button type="button"
+onclick="calc()">
+Click me</button>
+		<p id="out"></p>
+	
+</body>
+
+</html>
+<script type="text/javascript">
+	function calc()
+	{
+		var n=document.getElementById('days').value;
+		var d=0;
+		var n1=0;
+		if(n>=30)
+		{
+			 d=parseInt(n/30);
+			 n1=n-(d*30);
+		}
+		else
+		{
+			d=0;
+			n1=n;
+		}
+		
+		
+		document.getElementById("out").innerHTML="No. of days = "+n1+"and no. of months = "+d;
+		}
+
+
+	</script>

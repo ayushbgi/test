@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function submitBday() {
+    var Q4A = "Your birthday is: ";
+    var Bdate = document.getElementById('bday').value;
+    var Bday = +new Date(Bdate);
+    Q4A += Bdate + ". You are " + ~~ ((Date.now() - Bday) / (31557600000));
+    var theBday = document.getElementById('resultBday');
+    theBday.innerHTML = Q4A;
+}
+	</script>
+</head>
+<body>
+<p id="resultBday"></p>
+<input type="date" name="bday" id="bday" onchange="submitBday()">
+</body>
+</html>

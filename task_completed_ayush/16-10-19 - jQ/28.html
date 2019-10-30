@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		a{
+			cursor:not-allowed;
+		}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$('#clk').click(function(){
+						$('a').attr('style', 'cursor:pointer');
+
+				});
+
+			});
+	</script>
+	
+</head>
+<body>
+<a href="google.com">link 1</a><br><br>
+<a href="">link 2</a><br><br>
+<a href="">link 3</a><br><br>
+<a href="">link 4</a><br><br>
+<a href="">link 5</a><br><br>
+<a href="">link 6</a><br><br>
+<button id="clk">Enable the link !</button>
+</body>
+</html>

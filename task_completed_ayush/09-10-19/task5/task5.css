@@ -1,0 +1,116 @@
+input[type=text] {
+  width: 80%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  margin-right: 10%;
+  margin-left: 10%;
+
+ 
+  
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+body{
+  background-color: darkgrey !important;
+}
+
+.header{
+  margin-left: 10%;
+  margin-top: 3%;
+  font-size: 30px;
+}
+
+.hbody{
+  margin-left: 10%;
+  font-size: 15px;
+}
+
+.bbutton{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  float: right;
+  margin-right: 10%;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  margin-top: 0;
+
+}
+
+.button2 {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: 15px;
+}
+
+.button2:hover {
+  background-color: #f1f1f1;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+}
+.doth{
+  text-align:left;
+}
+
+.c1{
+  background-color: #fd378b;
+  padding: auto;
+}
+.c2{
+  background-color: orange;
+}
+
+.min{
+  float:right;
+}
+.card{
+  margin: 15px;
+
+
+}
+
+.calign{
+  float: left;
+  height: auto;
+}
+.bhead{
+  text-align: center;
+}
+
+.himg{
+  height: 5%;
+}

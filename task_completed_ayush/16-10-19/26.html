@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.bbody
+		{
+			color: red;
+		}
+
+		.bdiv
+		{
+			color: blue;
+			height: 100px;
+			background-color: grey;
+		}
+	</style>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$('body').click(function(){
+				alert($(this).attr("class"));
+				});
+				$('div').click(function(){
+				alert($(this).attr("class"));
+				});
+			});
+	</script>
+
+</head>
+<body class="bbody">
+	Hi Hello !!<br><br>
+	<div class="bdiv">
+		hello this is div inside body!
+	</div>
+</body>
+</html>

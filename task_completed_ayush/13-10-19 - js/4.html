@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Write a program to find the factorial of a given no? -->
+	<title></title>
+	<script type="text/javascript">
+		function calc()
+	{
+		var a=document.getElementById('num1').value;
+		var c=a;
+		var b=1;
+		while(a)
+		{
+			b*=a;
+			a--;
+		}
+		document.getElementById("out").innerHTML=c+"! = "+b;
+	}
+	</script>
+</head>
+<body>
+	<h1>Input num to calculate FACTORIAL !</h1>
+	<input type="number" id="num1" placeholder="Num" >
+	<button type="button"
+onclick="calc()">
+Click me</button>
+		<p id="out"></p>
+</body>
+</html>
